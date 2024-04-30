@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BookService } from '../book.service';
 
 @Component({
@@ -13,12 +13,13 @@ export class BooksComponent implements OnInit {
 
   formGroupBook : FormGroup;
 
+  isError : boolean = false;
 
  constructor(private formBuilder : FormBuilder,
              private service : BookService){
   this.formGroupBook = formBuilder.group({
     id : [''],
-    title : [''],
+    title : ['', [Validators.required, Validators.minLength(1)]],
     author : [''],
     publi : [''],
     price : [''],
@@ -33,13 +34,24 @@ export class BooksComponent implements OnInit {
     });
   }
  save(){
-  this.service.save(this.formGroupBook.value).subscribe({
-    next : data => this.books.push(data)
-  });
+  this.isError = true;
+
+  if (this.formGroupBook.valid) {
+    this.service.save(this.formGroupBook.value).subscribe({
+      next : data => this.books.push(data)
+    });
+    this.formGroupBook.reset();
+    this.isError = false;
+  }
  }
  delete(book : Book){
   this.service.delete(book).subscribe({
     next : () => this.loasBooks()
   });
  }
+
+ get title() : any{
+   return this.formGroupBook.get("title")
+ }
+
 }

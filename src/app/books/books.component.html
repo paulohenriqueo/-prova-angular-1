@@ -10,6 +10,9 @@
                   class="form-control" 
                   id="title" 
                   formControlName="title">
+                  <small *ngIf="isError && title.hasError('required')" class="text-danger">
+                    *O Titulo é requerido!
+                  </small>
                 </div>
                 <div class="mb-3">
                   <label for="autor" class="form-label">Autor</label>

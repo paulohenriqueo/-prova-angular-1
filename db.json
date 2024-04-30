@@ -1,3 +1,11 @@
 {
-  "books": []
+  "books": [
+    {
+      "id": 1,
+      "title": "Aprenda Java",
+      "author": "Glauco Todesco",
+      "publi": "Fatec-Itu",
+      "price": 30
+    }
+  ]
 }
