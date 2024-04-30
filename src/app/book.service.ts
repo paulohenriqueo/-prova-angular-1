@@ -20,4 +20,7 @@ export class BookService {
   save(book:Book): Observable<Book>{
     return this.http.post<Book>(this.url, book);
   }
+  delete(book:Book): Observable<void>{
+    return this.http.delete<void>(`${this.url}/${book.id}`);
+  }
 }

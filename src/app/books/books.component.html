@@ -52,6 +52,7 @@
                     <th scope="col">Autor</th>
                     <th scope="col">Editora</th>
                     <th scope="col">Preço</th>
+                    <th scope="col" >Remover</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -61,6 +62,11 @@
                     <td>{{book.author}}</td>
                     <td>{{book.publi}}</td>
                     <td>{{book.price}}</td>
+                    <td>
+                        <button class="btn btn-danger me-2"
+                        (click)="delete(book)"
+                        >Remover
+                    </button>
                   </tr>
                 </tbody>
               </table>

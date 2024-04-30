@@ -2,24 +2,10 @@
   "books": [
     {
       "id": 1,
-      "title": "Aprenda Java do 0",
-      "author": "Francisco Bianchi",
-      "publi": "Fatec-Itu",
-      "price": 20
-    },
-    {
-      "id": 2,
-      "title": "Hardware para Iniciantes",
-      "author": "Renato Luiz",
-      "publi": "Fatec-Itu",
-      "price": 25
-    },
-    {
-      "id": 3,
-      "title": "Comecei a faculdade de TI, e agora?",
+      "title": "Aprenda Java",
       "author": "Glauco Todesco",
       "publi": "Fatec-Itu",
-      "price": 20
+      "price": 30
     }
   ]
 }

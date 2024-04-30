@@ -37,4 +37,9 @@ export class BooksComponent implements OnInit {
     next : data => this.books.push(data)
   });
  }
+ delete(book : Book){
+  this.service.delete(book).subscribe({
+    next : () => this.loasBooks()
+  });
+ }
 }
