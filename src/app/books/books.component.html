@@ -1,8 +1,8 @@
 <div class="container bg-info-subtle my-2 rounded-2 p-5">
-    <div class="col-7 m-auto pb-5">
+    <div class="col-8 m-auto pb-5">
         <h1 class="text-center">Books</h1>
         <div class="row">
-            <form>
+            <form [formGroup]="formGroupBook">
                 <div class="mb-3">
                   <label for="Nome" class="form-label">Titulo</label>
                   <input 
@@ -37,8 +37,9 @@
                   </div>
                 <button 
                 type="submit" 
-                class="btn btn-primary">
-                Submit
+                class="btn btn-primary"
+                (click)="save()">
+                Cadastrar
                 </button>
               </form>
               
@@ -54,25 +55,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>20</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                    <td>25</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>twitter</td>
-                    <td>20</td>
+                  <tr *ngFor="let book of books">
+                    <th scope="row">{{book.id}}</th>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.publi}}</td>
+                    <td>{{book.price}}</td>
                   </tr>
                 </tbody>
               </table>

@@ -14,10 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
+    BooksComponent,
     NavBarComponent,
     FooterComponent,
-    HomeComponent,
-    BooksComponent
+    HomeComponent
+    
   ],
   imports: [
     BrowserModule,
