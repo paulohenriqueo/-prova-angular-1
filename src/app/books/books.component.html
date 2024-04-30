@@ -1,1 +1,82 @@
-<p>books!</p>
+<div class="container bg-info-subtle my-2 rounded-2 p-5">
+    <div class="col-7 m-auto pb-5">
+        <h1 class="text-center">Books</h1>
+        <div class="row">
+            <form>
+                <div class="mb-3">
+                  <label for="Nome" class="form-label">Titulo</label>
+                  <input 
+                  type="id" 
+                  class="form-control" 
+                  id="title" 
+                  formControlName="title">
+                </div>
+                <div class="mb-3">
+                  <label for="autor" class="form-label">Autor</label>
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  id="autor"
+                  formControlName="author">
+                </div>
+                <div class="mb-3">
+                    <label for="autor" class="form-label">Editora</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="editora"
+                    formControlName="publi">
+                  </div>
+                  <div class="mb-3">
+                    <label for="autor" class="form-label">Preço</label>
+                    <input 
+                    type="number" 
+                    class="form-control" 
+                    id="Preço"
+                    formControlName="price">
+                  </div>
+                <button 
+                type="submit" 
+                class="btn btn-primary">
+                Submit
+                </button>
+              </form>
+              
+              <h2 class="text-center">Lista de Livros:</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Editora</th>
+                    <th scope="col">Preço</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>fat</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>twitter</td>
+                    <td>20</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
